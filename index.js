@@ -22,10 +22,16 @@ module.exports = (function() {
 
   }
 
+  function listen() {
+
+  }
+
   chimneypot.prototype = {
     constructor: chimneypot,
 
-    route: route
+    route: route,
+
+    listen: listen
   };
 
   return chimneypot;
