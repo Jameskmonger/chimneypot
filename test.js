@@ -87,11 +87,13 @@ shouldNotThrowError(function() {
 })();
 
 // Call listen before routing
-shouldThrowError(function() {
+(function() {
   var c = _setupValidChimneypot();
 
-  c.listen();
-});
+  shouldThrowError(function() {
+    c.listen();
+  });
+})();
 
 console.log("all tests passed");
 
