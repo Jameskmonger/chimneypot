@@ -13,6 +13,14 @@ shouldThrowError(function() {
   });
 });
 
+// No path
+shouldThrowError(function() {
+  new chimneypot({
+    port: 1996,
+    secret: 'spooky'
+  });
+});
+
 console.log("all tests passed");
 
 function shouldThrowError(func, message) {
