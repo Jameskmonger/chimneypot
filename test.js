@@ -57,6 +57,15 @@ shouldNotThrowError(function() {
       secret: 'spooky'
     });
   });
+
+  // Array port
+  shouldThrowError(function() {
+    new chimneypot({
+      port: [],
+      path: '/',
+      secret: 'spooky'
+    });
+  });
 })();
 
 console.log("all tests passed");
