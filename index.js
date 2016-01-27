@@ -10,6 +10,11 @@ module.exports = (function() {
       return false;
     }
 
+    // Non numbers and non-integers
+    if (Number(opts.port) !== opts.port || opts.port % 1 !== 0) {
+      return false;
+    }
+
     return true;
   }
 
