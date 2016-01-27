@@ -3,6 +3,12 @@ module.exports = (function() {
     if (!opts || !isOptionsValid(opts)) {
       throw new Error("Required options: port, path, secret");
     }
+
+    this.options = {
+      port: opts.port,
+      path: opts.path,
+      secret: opts.secret
+    };
   }
 
   function isOptionsValid(opts) {
