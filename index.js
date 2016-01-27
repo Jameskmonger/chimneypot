@@ -31,6 +31,10 @@ module.exports = (function() {
   }
 
   function route(path, callback) {
+    if (this.server !== undefined) {
+      throw new Error("Route cannot be applied while the server is listening");
+    }
+
     this.routeCount++;
 
     if (this.routes[path] === undefined) {
