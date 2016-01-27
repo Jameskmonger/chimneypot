@@ -99,6 +99,8 @@ shouldThrowError(function() {
   shouldNotThrowError(function() {
     c.listen();
   });
+
+  c.kill();
 })();
 
 console.log("all tests passed");
@@ -127,8 +129,6 @@ function _throws(func) {
   try {
     func();
   } catch (err) {
-    console.log(err);
-
     return true;
   }
   return false;
