@@ -47,12 +47,14 @@ module.exports = (function() {
 
     var handler = webhookHandler({ path: this.options.path, secret: this.options.secret });
 
-    http.createServer(function (req, res) {
+    this.server = http.createServer(function (req, res) {
       handler(req, res, function (err) {
         res.statusCode = 404;
         res.end('no such location');
       });
-    }).listen(this.options.port, function() {
+    });
+
+    this.server.listen(this.options.port, function() {
       console.log("listening on *:" + this.options.port);
     }.bind(this));
   }
