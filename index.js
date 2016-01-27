@@ -27,7 +27,7 @@ module.exports = (function() {
   }
 
   function route(path, callback) {
-
+    this.routeCount++;
   }
 
   function listen() {
