@@ -44,6 +44,17 @@ module.exports = (function() {
     if (this.routeCount === 0) {
       throw new Error("Routes must be applied before listening.");
     }
+
+    var handler = webhookHandler({ path: path, secret: secret });
+
+    http.createServer(function (req, res) {
+      handler(req, res, function (err) {
+        res.statusCode = 404;
+        res.end('no such location');
+      });
+    }).listen(port, function() {
+      console.log("listening on *:" + port);
+    });
   }
 
   chimneypot.prototype = {
