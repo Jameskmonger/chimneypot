@@ -44,3 +44,17 @@ function shouldThrowError(func) {
     throw new Error("Expected error to be thrown, none thrown");
   }
 }
+
+function shouldNotThrowError(func) {
+  var thrown = false;
+
+  try {
+    func();
+  } catch (err) {
+    thrown = true;
+  }
+
+  if (thrown) {
+    throw new Error("Expected error to not be thrown, but was thrown");
+  }
+}
