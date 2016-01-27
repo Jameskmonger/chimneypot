@@ -18,7 +18,7 @@ module.exports = (function() {
   }
 
   function isOptionsValid(opts) {
-    if (opts.port === undefined || opts.path === undefined) {
+    if (opts.port === undefined || opts.path === undefined || opts.secret === undefined) {
       return false;
     }
 
