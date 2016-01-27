@@ -45,15 +45,15 @@ module.exports = (function() {
       throw new Error("Routes must be applied before listening.");
     }
 
-    var handler = webhookHandler({ path: path, secret: secret });
+    var handler = webhookHandler({ path: this.options.path, secret: this.options.secret });
 
     http.createServer(function (req, res) {
       handler(req, res, function (err) {
         res.statusCode = 404;
         res.end('no such location');
       });
-    }).listen(port, function() {
-      console.log("listening on *:" + port);
+    }).listen(this.options.port, function() {
+      console.log("listening on *:" + this.options.port);
     });
   }
 
