@@ -124,6 +124,14 @@ shouldThrowError(function() {
     c.route('push', function(){});
     c.route('push', function(){});
   });
+
+  // should not throw for three routes, same name
+  shouldNotThrowError(function() {
+    var c = _setupValidChimneypot();
+    c.route('push', function(){});
+    c.route('push', function(){});
+    c.route('push', function(){});
+  });
 })();
 
 console.log("all tests passed");
