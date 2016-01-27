@@ -11,6 +11,7 @@ module.exports = (function() {
     };
 
     this.routeCount = 0;
+    this.routes = {};
   }
 
   function isOptionsValid(opts) {
@@ -28,6 +29,12 @@ module.exports = (function() {
 
   function route(path, callback) {
     this.routeCount++;
+
+    if (this.routes[path] === undefined) {
+      this.routes[path] = [];
+    }
+
+    this.routes[path][this.routes[path].length - 1] = callback;
   }
 
   function listen() {
