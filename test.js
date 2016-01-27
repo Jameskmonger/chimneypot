@@ -110,6 +110,15 @@ shouldThrowError(function() {
   c.kill();
 })();
 
+// route() errors
+(function() {
+  // should not throw for one route
+  shouldNotThrowError(function() {
+    var c = _setupValidChimneypot();
+    c.route('push', function(){});
+  });
+})();
+
 console.log("all tests passed");
 
 function shouldThrowError(func) {
