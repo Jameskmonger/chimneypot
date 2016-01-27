@@ -57,6 +57,10 @@ module.exports = (function() {
     this.server.listen(this.options.port, function() {
       console.log("listening on *:" + this.options.port);
     }.bind(this));
+
+    for (var path in this.routes) {
+      handler.on(path, this.routes[path]);
+    }
   }
 
   function kill() {
