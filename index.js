@@ -1,6 +1,8 @@
 var chimneypot = (function() {
-  function chimneypot() {
-
+  function chimneypot(opts) {
+    if (!opts) {
+      throw new Error("Required options: port, path, secret");
+    }
   }
 
   chimneypot.prototype = {
