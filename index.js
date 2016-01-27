@@ -1,3 +1,5 @@
+var http = require('http');
+
 module.exports = (function() {
   function chimneypot(opts) {
     if (!opts || !isOptionsValid(opts)) {
