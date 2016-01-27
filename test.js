@@ -1,5 +1,7 @@
 var chimneypot = require('./index.js');
 
+shouldThrowError(function() { new chimneypot(); });
+
 function shouldThrowError(func, message) {
   var thrown = false;
 
