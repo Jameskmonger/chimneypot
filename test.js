@@ -75,6 +75,15 @@ shouldNotThrowError(function() {
       secret: 'spooky'
     });
   });
+
+  // Non-integer port
+  shouldThrowError(function() {
+    new chimneypot({
+      port: 50.5,
+      path: '/',
+      secret: 'spooky'
+    });
+  });
 })();
 
 console.log("all tests passed");
