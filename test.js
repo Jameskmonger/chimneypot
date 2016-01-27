@@ -31,7 +31,7 @@ shouldNotThrowError(function() {
 
 console.log("all tests passed");
 
-function shouldThrowError(func, message) {
+function shouldThrowError(func) {
   var thrown = false;
 
   try {
@@ -41,10 +41,6 @@ function shouldThrowError(func, message) {
   }
 
   if (!thrown) {
-    if (!message) {
-      throw new Error("Expected error to be thrown, none thrown");
-    }
-
-    throw new Error("Expected error to be thrown, none thrown: " + message);
+    throw new Error("Expected error to be thrown, none thrown");
   }
 }
