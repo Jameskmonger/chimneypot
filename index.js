@@ -59,7 +59,11 @@ module.exports = (function() {
     }.bind(this));
 
     for (var path in this.routes) {
-      handler.on(path, this.routes[path]);
+      handler.on(path, function(data) {
+        for (var c in this.routes[path]) {
+          this.routes[path][c](data);
+        }
+      }.bind(this));
     }
   }
 
