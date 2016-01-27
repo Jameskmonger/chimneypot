@@ -90,12 +90,14 @@ shouldThrowError(function() {
 (function() {
   var c = _setupValidChimneypot();
 
+  // Listen before routes
   shouldThrowError(function() {
     c.listen();
   });
 
   c.route('push', function(){});
 
+  // Listen after routing (valid)
   shouldNotThrowError(function() {
     c.listen();
   });
