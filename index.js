@@ -59,12 +59,22 @@ module.exports = (function() {
     }.bind(this));
   }
 
+  function kill() {
+    if (this.server !== undefined) {
+      this.server.close();
+    }
+
+    this.server = undefined;
+  }
+
   chimneypot.prototype = {
     constructor: chimneypot,
 
     route: route,
 
-    listen: listen
+    listen: listen,
+
+    kill: kill
   };
 
   return chimneypot;
