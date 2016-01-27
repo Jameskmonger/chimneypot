@@ -1,4 +1,4 @@
-var chimneypot = (function() {
+module.exports = (function() {
   function chimneypot(opts) {
     if (!opts) {
       throw new Error("Required options: port, path, secret");
@@ -10,6 +10,4 @@ var chimneypot = (function() {
   };
 
   return chimneypot;
-});
-
-module.exports = chimneypot;
+})();
