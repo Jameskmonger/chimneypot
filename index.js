@@ -9,6 +9,8 @@ module.exports = (function() {
       path: opts.path,
       secret: opts.secret
     };
+
+    this.routes = {};
   }
 
   function isOptionsValid(opts) {
