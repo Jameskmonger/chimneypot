@@ -100,6 +100,13 @@ function shouldNotThrowError(func) {
   }
 }
 
+function _setupValidChimneypot() {
+  return new chimneypot({
+    port: 1996,
+    path: '/'
+  });
+}
+
 function _throws(func) {
   try {
     func();
