@@ -41,7 +41,7 @@ function shouldThrowError(func) {
   }
 
   if (!thrown) {
-    throw new Error("Expected error to be thrown, none thrown");
+    throw new Error("Expected error to be thrown, but was not thrown");
   }
 }
 
