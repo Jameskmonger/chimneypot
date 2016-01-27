@@ -66,6 +66,15 @@ shouldNotThrowError(function() {
       secret: 'spooky'
     });
   });
+
+  // Object port
+  shouldThrowError(function() {
+    new chimneypot({
+      port: {},
+      path: '/',
+      secret: 'spooky'
+    });
+  });
 })();
 
 console.log("all tests passed");
