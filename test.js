@@ -48,6 +48,15 @@ shouldNotThrowError(function() {
       secret: 'spooky'
     });
   });
+
+  // Boolean port (true)
+  shouldThrowError(function() {
+    new chimneypot({
+      port: true,
+      path: '/',
+      secret: 'spooky'
+    });
+  });
 })();
 
 console.log("all tests passed");
