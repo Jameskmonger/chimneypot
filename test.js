@@ -5,7 +5,7 @@ function shouldThrowError(func, message) {
 
   try {
     func();
-  } catch {
+  } catch (err) {
     thrown = true;
   }
 
