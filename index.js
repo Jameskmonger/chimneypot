@@ -54,7 +54,7 @@ module.exports = (function() {
       });
     }).listen(this.options.port, function() {
       console.log("listening on *:" + this.options.port);
-    });
+    }.bind(this));
   }
 
   chimneypot.prototype = {
