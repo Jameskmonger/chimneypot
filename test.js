@@ -2,6 +2,8 @@ var chimneypot = require('./index.js');
 
 shouldThrowError(function() { new chimneypot(); });
 
+console.log("all tests passed");
+
 function shouldThrowError(func, message) {
   var thrown = false;
 
