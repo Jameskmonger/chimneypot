@@ -86,6 +86,13 @@ shouldNotThrowError(function() {
   });
 })();
 
+// Call listen before routing
+shouldThrowError(function() {
+  var c = _setupValidChimneypot();
+
+  c.listen();
+});
+
 console.log("all tests passed");
 
 function shouldThrowError(func) {
