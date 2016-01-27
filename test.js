@@ -22,7 +22,7 @@ shouldThrowError(function() {
 });
 
 // No secret
-shouldNotThrowError(function() {
+shouldThrowError(function() {
   new chimneypot({
     port: 1996,
     path: '/'
@@ -118,7 +118,8 @@ function shouldNotThrowError(func) {
 function _setupValidChimneypot() {
   return new chimneypot({
     port: 1996,
-    path: '/'
+    path: '/',
+    secret: 'spooky'
   });
 }
 
