@@ -129,6 +129,8 @@ function _throws(func) {
   try {
     func();
   } catch (err) {
+    console.log(err);
+
     return true;
   }
   return false;
