@@ -32,29 +32,22 @@ shouldNotThrowError(function() {
 console.log("all tests passed");
 
 function shouldThrowError(func) {
-  var thrown = false;
-
-  try {
-    func();
-  } catch (err) {
-    thrown = true;
-  }
-
-  if (!thrown) {
+  if (!_throws(func)) {
     throw new Error("Expected error to be thrown, but was not thrown");
   }
 }
 
 function shouldNotThrowError(func) {
-  var thrown = false;
+  if (_throws(func)) {
+    throw new Error("Expected error to not be thrown, but was thrown");
+  }
+}
 
+function _throws(func) {
   try {
     func();
   } catch (err) {
-    thrown = true;
+    return true;
   }
-
-  if (thrown) {
-    throw new Error("Expected error to not be thrown, but was thrown");
-  }
+  return false;
 }
