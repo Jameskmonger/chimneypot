@@ -65,6 +65,7 @@ module.exports = (function() {
     }
 
     this.server = undefined;
+    console.log("Server killed");
   }
 
   chimneypot.prototype = {
