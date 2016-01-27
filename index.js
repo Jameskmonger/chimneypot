@@ -18,8 +18,14 @@ module.exports = (function() {
     return true;
   }
 
+  function route(path, callback) {
+
+  }
+
   chimneypot.prototype = {
-    constructor: chimneypot
+    constructor: chimneypot,
+
+    route: route
   };
 
   return chimneypot;
