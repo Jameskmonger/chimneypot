@@ -21,6 +21,14 @@ shouldThrowError(function() {
   });
 });
 
+// No secret
+shouldNotThrowError(function() {
+  new chimneypot({
+    port: 1996,
+    path: '/'
+  });
+});
+
 console.log("all tests passed");
 
 function shouldThrowError(func, message) {
