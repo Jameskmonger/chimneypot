@@ -10,7 +10,7 @@ module.exports = (function() {
       secret: opts.secret
     };
 
-    this.routes = {};
+    this.routeCount = 0;
   }
 
   function isOptionsValid(opts) {
@@ -31,7 +31,9 @@ module.exports = (function() {
   }
 
   function listen() {
-
+    if (this.routeCount === 0) {
+      throw new Error("Routes must be applied before listening.");
+    }
   }
 
   chimneypot.prototype = {
