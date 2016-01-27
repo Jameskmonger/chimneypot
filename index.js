@@ -37,7 +37,7 @@ module.exports = (function() {
       this.routes[path] = [];
     }
 
-    this.routes[path][this.routes[path].length - 1] = callback;
+    this.routes[path][this.routes[path].length + 1] = callback;
   }
 
   function listen() {
