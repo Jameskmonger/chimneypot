@@ -5,6 +5,14 @@ shouldThrowError(function() {
   new chimneypot();
 });
 
+// No port
+shouldThrowError(function() {
+  new chimneypot({
+    path: '/',
+    secret: 'spooky'
+  });
+});
+
 console.log("all tests passed");
 
 function shouldThrowError(func, message) {
