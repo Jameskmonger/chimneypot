@@ -1,4 +1,5 @@
 var http = require('http');
+var webhookHandler = require('github-webhook-handler');
 
 module.exports = (function() {
   function chimneypot(opts) {
