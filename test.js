@@ -102,6 +102,11 @@ shouldThrowError(function() {
     c.listen();
   });
 
+  // Route while listening
+  shouldThrowError(function() {
+    c.route('bla', function() {});
+  });
+
   c.kill();
 })();
 
