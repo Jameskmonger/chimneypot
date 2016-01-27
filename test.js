@@ -86,11 +86,17 @@ shouldNotThrowError(function() {
   });
 })();
 
-// Call listen before routing
+// listen() errors
 (function() {
   var c = _setupValidChimneypot();
 
   shouldThrowError(function() {
+    c.listen();
+  });
+
+  c.route('push', function(){});
+
+  shouldNotThrowError(function() {
     c.listen();
   });
 })();
