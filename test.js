@@ -29,6 +29,18 @@ shouldNotThrowError(function() {
   });
 });
 
+// Non numeric port
+(function() {
+  // String port
+  shouldThrowError(function() {
+    new chimneypot({
+      port: 'wrong',
+      path: '/',
+      secret: 'spooky'
+    });
+  });
+})();
+
 console.log("all tests passed");
 
 function shouldThrowError(func) {
