@@ -8,7 +8,7 @@ Chimneypot is a lightweight Node.js handler for GitHub webhooks. It allows you t
 
 Chimneypot was designed to be simple, succinct and easy to use.
 
-To print to the console every time you receive a push event from your repo:
+To print to the console every time you receive a `push` event from your repo:
 
     var chimneypot = require('chimneypot');
 
