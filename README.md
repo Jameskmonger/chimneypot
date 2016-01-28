@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/chimneypot.svg)](https://badge.fury.io/js/chimneypot)
 
-Chimneypot is a lightweight Node.js handler for GitHub webhooks.
+Chimneypot is a lightweight Node.js handler for GitHub webhooks. It allows you to listen to all kinds of GitHub events and execute functions on your server.
 
 ## License
 
