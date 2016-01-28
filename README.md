@@ -6,7 +6,7 @@ Chimneypot is a lightweight Node.js handler for GitHub webhooks. It allows you t
 
 ## Usage
 
-Chimneypot was designed to be simple, succint and easy to use.
+Chimneypot was designed to be simple, succinct and easy to use.
 
 ## License
 
