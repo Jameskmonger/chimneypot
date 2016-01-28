@@ -24,7 +24,9 @@ To print to the console every time you receive a push event from your repo:
 
     pot.listen();
 
-Chimneypot will then be listening for any push events to `*:3000/hook`.
+Chimneypot will then be listening for any push events to `*:3000/hook`. When it receives a `push` event, it will log to the console:
+
+> We have received a push event!
 
 ## License
 
