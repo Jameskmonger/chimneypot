@@ -24,6 +24,8 @@ To print to the console every time you receive a push event from your repo:
 
     pot.listen();
 
+Chimneypot will then be listening for any push events to `*:3000/hook`.
+
 ## License
 
 Chimneypot is completely released into the public domain, using [The Unlicense](http://unlicense.org). To see the full license text included with the project, you can read the [LICENSE file](/LICENSE).
