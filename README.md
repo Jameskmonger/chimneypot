@@ -28,6 +28,12 @@ Chimneypot will then be listening for any push events to `*:3000/hook`. When it 
 
 > We have received a push event!
 
+## Installation
+
+You can install [the Chimneypot npm package](https://www.npmjs.com/package/chimneypot) with the following command:
+
+    $ npm install chimneypot --save
+
 ## License
 
 Chimneypot is completely released into the public domain, using [The Unlicense](http://unlicense.org). To see the full license text included with the project, you can read the [LICENSE file](/LICENSE).
