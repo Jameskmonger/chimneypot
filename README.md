@@ -8,6 +8,10 @@ Chimneypot is a lightweight Node.js handler for GitHub webhooks. It allows you t
 
 Chimneypot was designed to be simple, succinct and easy to use.
 
+To print to the console every time you receive a push event from your repo:
+
+    var chimneypot = require('chimneypot');
+
 ## License
 
 Chimneypot is completely released into the public domain, using [The Unlicense](http://unlicense.org). To see the full license text included with the project, you can read the [LICENSE file](/LICENSE).
