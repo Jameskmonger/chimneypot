@@ -4,4 +4,4 @@
 
 ## License
 
-Chimneypot is completely released into the public domain, using [The Unlicense](http://unlicense.org). To see our license, you can read the [LICENSE file](/LICENSE).
+Chimneypot is completely released into the public domain, using [The Unlicense](http://unlicense.org). To see the full license text included with the project, you can read the [LICENSE file](/LICENSE).
