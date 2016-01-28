@@ -1,6 +1,6 @@
 {
   "name": "chimneypot",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Lightweight git webhook handler",
   "main": "index.js",
   "scripts": {
