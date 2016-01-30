@@ -63,7 +63,7 @@ module.exports = (function() {
     }.bind(this));
 
     for (var path in this.routes) {
-      (function () {
+      (function (path) {
         handler.on(path, function(data) {
           for (var c in this.routes[path]) {
             this.routes[path][c](data);
