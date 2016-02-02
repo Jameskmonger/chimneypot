@@ -69,7 +69,7 @@ module.exports = (function() {
             this.routes[path][c](data);
           }
         }.bind(this));
-      })(path);
+      }).bind(this)(path);
     }
   }
 
