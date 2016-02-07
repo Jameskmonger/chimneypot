@@ -4,7 +4,7 @@
   "description": "Lightweight git webhook handler",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node_modules/istanbul/lib/cli.js cover node_modules/nodeunit/bin/nodeunit"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,10 @@
   "homepage": "https://github.com/Jameskmonger/chimneypot",
   "dependencies": {
     "github-webhook-handler": "^0.5.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "nodeunit": "^0.9.1",
+    "proxyquire": "^1.7.4"
   }
 }
