@@ -4,7 +4,7 @@
   "description": "Lightweight git webhook handler",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node_modules/istanbul/lib/cli.js cover node_modules/nodeunit/bin/nodeunit"
   },
   "repository": {
     "type": "git",
