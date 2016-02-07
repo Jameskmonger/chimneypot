@@ -54,7 +54,7 @@ exports.testMultipleHandlers = function (test) {
 
     listenerMethods['push']();
 
-    test.ok(pushCount === 3, 'Expected 2 push events. Received ' + pushCount);
+    test.ok(pushCount === 3, 'Expected 3 push events. Received ' + pushCount);
 
 
     test.done();
